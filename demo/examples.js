@@ -17,7 +17,7 @@ var people = [
 
 	// If else & Binding
 var ifElse = App.View.IfElse = Ember.View.create({
-	templateName: 'handlebars-if_else',
+	templateName: 'template',
 	classNames: ['well'],
 
 	firstName: 'Jane',

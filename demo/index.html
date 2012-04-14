@@ -6,29 +6,25 @@
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="style.css" />
 
-		<script type="text/x-handlebars" data-template-name="handlebars-basics">
-
-		</script>
-
-		<script type="text/x-handlebars" data-template-name="handlebars-if_else">
+		<script type="text/x-handlebars" data-template-name="template">
 			{{#if _loggedIn}}
-				Welcome back, <b>{{highlight fullName}}</b>!<br/>
-				<form class="well" onsubmit="return false;">
-					<label>Your first name:</label>
-					{{view Ember.TextField class="span3" valueBinding="firstName" }}
-				</form>
-				Your last name is {{lastName}} and your car is <span class="{{unbound color}}">{{color}}</span><br/>
-				{{view Ember.TextField valueBinding="color"}}<br/>
-				Remaining tasks: {{remaining}}<br/>
+			Welcome back, <b>{{highlight fullName}}</b>!<br/>
+			<form class="well" onsubmit="return false;">
+				<label>Your first name:</label>
+				{{view Ember.TextField class="span3" valueBinding="firstName" }}
+			</form>
+			Your last name is {{lastName}} and your car is <span class="{{unbound color}}">{{color}}</span><br/>
+			{{view Ember.TextField valueBinding="color"}}<br/>
+			Remaining tasks: {{remaining}}<br/>
 
 
-				<button class="btn btn-primary" {{action "closeTask" on="click"}}>Close task</button>
+			<button class="btn btn-primary" {{action "closeTask" on="click"}}>Close task</button>
 			{{else}}
-				Please <a href="#" {{action "login" on="click"}}>log in</a>.
+			Please <a href="#" {{action "login" on="click"}}>log in</a>.
 			{{/if}}
 
 			{{#unless _loggedIn}}
-				&nbsp;User has not yet logged in
+			&nbsp;User has not yet logged in
 			{{/unless}}
 			<br/>
 
@@ -36,11 +32,7 @@
 			Multiple: {{multipleValue}}<br/>
 
 			<button class="btn btn-primary" {{action "sayHello" on="click"}}>Say hello</button>
-
 		</script>
-
-
-
 	</head>
 	<body>
 
@@ -54,12 +46,15 @@
 			<section id="examples"></section>
 		</div>
 
+		<script type="text/javascript" src="lib/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="lib/ember-0.9.6.min.js"></script>
+		<script type="text/javascript" src="lib/ember-data/ember-data.min.js"></script>
+		<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
-			var require = {
-				'baseUrl':'lib/requirejs/'
-			};
+			App = Ember.Application.create();
+			App.View = {};
 		</script>
-		<script src="lib/requirejs/require.js" data-main="app.js"></script>
+		<script type="text/javascript" src="examples.js"></script>
 
 	</body>
 </html>
