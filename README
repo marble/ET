@@ -1,2 +1,12 @@
+Demo file used
+==============
+
+The files in /demo/ contain the example used.
+
+Presentation
+============
+
+To render the actual presentation, use sphinx-build.
 Render command:
+
 	make singlehtml5
