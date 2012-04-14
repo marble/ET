@@ -5,4 +5,5 @@ Ember Data
 Ember Data
 ==========
 
-Foo
+`Ember Data <https://github.com/emberjs/data>`_
+

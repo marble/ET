@@ -42,7 +42,7 @@ Add new properties during instantiation
 	tom.helloWorld();
 
 Calling the parent method
--------------------------
+=========================
 
 ::
 
@@ -89,6 +89,7 @@ properties / methods and call `this._super()`.
 	});
 
 Use `reopenClass()` to extend the class
+=======================================
 
 ::
 

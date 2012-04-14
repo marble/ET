@@ -1,4 +1,4 @@
-App.View.HandlebarBasics = App.View.Example.extend({
+App.View.ObjectmodelRepoen = App.View.Example.extend({
 	title: 'Handlebars basics',
 	description: '',
 	content: {

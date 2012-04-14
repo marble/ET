@@ -56,7 +56,7 @@ objects or your view.
 	MyApp.country.get('presidentName');
 
 One-way binding
----------------
+===============
 
 By default bindings are two-way, but they can be configured to be one-way
 
@@ -65,6 +65,13 @@ By default bindings are two-way, but they can be configured to be one-way
 	MyApp.country = Ember.Object.create({
 		presidentNameBinding: Ember.Binding.oneWay('MyApp.president.name')
 	});
+
+Debugging bindings
+==================
+
+::
+
+	Ember.LOG_BINDINGS = true;
 
 Computed Properties
 ===================

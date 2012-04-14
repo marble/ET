@@ -1,1 +1,0 @@
-App.View = App.View || {};
